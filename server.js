@@ -9,7 +9,7 @@ app.get("/ping",(req,res)=>{
         
       } catch (error) {
         console.log(error);
-        res.json({"errorMsg":error})
+        res.json({"errorMsg":"Error"})
       }
 })
 
