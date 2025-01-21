@@ -1,9 +1,11 @@
 
 Project title : Reaction time (React)
+
 Project overview:
 Reaction time is a simple app to check what is the reaction time of the user .The app will display a prompt, and users must click as quickly as possible after it appears. It allows users to check their reaction time and creating a scoreboard where the user can view their past records.
 
 Key features:
+
 Start : users can start the test
 Delay : there is a random delay before the prompt appears
 Reaction measurement : Measure the time between the prompt appearing and the user clicking it
