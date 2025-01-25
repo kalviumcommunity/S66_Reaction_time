@@ -18,3 +18,6 @@ Front end : React.js
 Tools : Git version control , VS code for development , npm for package management
 Why this project:
 This project is used to enhance skills in event handling,managing state and working with timers in react,The project will help in developing a deeper understanding of React's asynchronous behavior and user interaction management, which are essential for building interactive web applications.
+
+### DEPLOYED LINK
+- https://s66-reaction-time.onrender.com
