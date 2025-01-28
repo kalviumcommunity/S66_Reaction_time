@@ -1,18 +1,38 @@
-const express=require("express")
-const app=express();
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+const UserModel = require('./model/userModel');
+require('dotenv').config();
 
-const PORT=8989;
+app.use(express.json());
 
-app.get("/ping",(req,res)=>{
-      try {
-        res.json({"message":"pong"})
-        
-      } catch (error) {
+mongoose.connect(process.env.mongoURI)
+    .then(() => {
+        console.log("Successfully connected to MongoDB");
+    })
+    .catch((error) => {
         console.log(error);
-        res.json({"errorMsg":error})
-      }
-})
+    });
 
-app.listen(PORT,()=>{
-  console.log(`Server is running on http://localhost:${PORT} successfully`);
-})
+
+app.get('/ping', (req, res) => {
+    res.send('pong');
+});
+
+app.post('/create', async(req,res)=>{
+    const{name,email,password}= req.body;
+    payload={name,email,password};
+    
+    try {
+        let newUser = new UserModel(payload);
+        await newUser.save();
+    } catch (error) {
+        console.log(error);
+        res.send({error:"error"})
+    }
+});
+
+
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running on port ${process.env.PORT}`);
+});
