@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const UserModel = require('./model/userModel');
+// const UserModel = require('./model/userModel');
+const userRoutes = require('./routes/routes');
+
 require('dotenv').config();
 
 app.use(express.json());
@@ -29,18 +31,22 @@ app.get('/ping', (req, res) => {
     res.send('pong');
 });
 
-app.post('/create', async(req,res)=>{
-    const{name,email,password}= req.body;
-    payload={name,email,password};
+// replaces by usercontroller
+
+// app.post('/create', async(req,res)=>{
+//     const{name,email,password}= req.body;
+//     payload={name,email,password};
     
-    try {
-        let newUser = new UserModel(payload);
-        await newUser.save();
-    } catch (error) {
-        console.log(error);
-        res.send({error:"error"})
-    }
-});
+//     try {
+//         let newUser = new UserModel(payload);
+//         await newUser.save();
+//     } catch (error) {
+//         console.log(error);
+//         res.send({error:"error"})
+//     }
+// });
+
+app.use('/user', userRoutes);
 
 
 app.listen(process.env.PORT, () => {
