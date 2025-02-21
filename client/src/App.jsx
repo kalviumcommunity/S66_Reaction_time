@@ -1,13 +1,18 @@
-import "./App.css";
-import Button from "./components/Button";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddEntity from "./components/AddEntity";
+import Home from "./Home";
+import "./app.css";
 
 function App() {
   return (
-    <div className="app-container">
-      <div className="reaction-time-tester">
-        <Button />
-      </div>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/add-entity" element={<AddEntity />} />
+        </Routes>   
+      </BrowserRouter>
+    </>
   );
 }
 
