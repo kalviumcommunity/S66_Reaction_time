@@ -1,0 +1,18 @@
+{
+  "name": "s66_reaction_time",
+  "version": "1.0.0",
+  "description": "Project title : Reaction time (React)\r Project overview:\r Reaction time is a simple app to check what is the reaction time of the user .The app will display a prompt, and users must click as quickly as possible after it appears. It allows users to check their reaction time and creating a scoreboard where the user can view their past records.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "nodemon": "^3.1.9"
+  }
+}
