@@ -1,0 +1,83 @@
+/* Container to center the form */
+.add-entity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Styling the form */
+.add-entity-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Title inside the form */
+.add-entity-form h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Input fields */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit button */
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-button:hover {
+    background: #0056b3;
+}
+
+/* Styling the entity list */
+.entity-list {
+    margin-top: 2rem;
+    width: 400px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title above entity list */
+.entity-list h3 {
+    text-align: center;
+    color: #333;
+}
+
+/* Entity list items */
+.entity-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.entity-item {
+    background: #eef2ff;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
