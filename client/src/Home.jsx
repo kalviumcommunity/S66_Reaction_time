@@ -18,7 +18,7 @@ function Home() {
 
   return (
     <div className="Home-container">
-      <h1>Welcomee to Reaction Time Tester</h1>
+      <h1>Welcome to Reaction Time Tester</h1>
       {/* Display fetched API data */}
       {data ? (
         <div className="api-data">
