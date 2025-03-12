@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 // const UserModel = require('./model/userModel');
-const userRoutes = require('./routes/routes');
+const userRoutes = require('./routes/userRoutes');
+const timeRoutes = require('./routes/timeRoutes')
 
 require('dotenv').config();
 
@@ -47,8 +48,9 @@ app.get('/ping', (req, res) => {
 // });
 
 app.use('/user', userRoutes);
+app.use('/time', timeRoutes);
 
 
 app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`);
+    console.log(`Server is running on port http://localhost:${process.env.PORT}`);
 });
