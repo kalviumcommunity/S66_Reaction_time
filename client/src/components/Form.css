@@ -1,0 +1,113 @@
+/* General leaderboard container */
+.leaderboard-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading style */
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* Add Reaction Time Button */
+  .add-time-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+  }
+  
+  .add-time-button:hover {
+    background: #0056b3;
+  }
+  
+  /* Individual leaderboard entry */
+  .leaderboard-entry {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    transition: 0.3s;
+  }
+  
+  .leaderboard-entry:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Leaderboard text */
+  .leaderboard-entry h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .leaderboard-entry p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Loading text */
+  .loading-text {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+  }
+
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full screen height */
+    text-align: center;
+  }
+  
+  /* Loading spinner animation */
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #ddd;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Loading text */
+  .loading-text {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .leaderboard-container {
+      width: 90%;
+      padding: 15px;
+    }
+  }
+  
