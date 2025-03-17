@@ -41,7 +41,7 @@ const AddTime = () => {
       <h2 className="text-xl font-semibold">Add New Time</h2>
       <input
         type="text"
-        placeholder="Time (min:sec:millisecond)"
+        placeholder="Time (sec:millisecond)"
         value={time}
         onChange={(e) => setTime(e.target.value)}
         className="w-full p-2 border rounded"

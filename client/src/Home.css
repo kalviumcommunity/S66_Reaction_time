@@ -1,14 +1,68 @@
 .Home-container {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    background-color: #f5f5f5; 
-    text-align: center;
-  }
-  
-  .reaction-time-tester {
-    margin-top: 20px;  
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #2e2e2e; /* Grey background */
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.api-data {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.api-data p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.reaction-time-tester {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* Primary button (start test) */
+button:first-of-type {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* Leaderboard button */
+.leaderboard-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.leaderboard-button:hover {
+  background-color: #45a049;
+}
