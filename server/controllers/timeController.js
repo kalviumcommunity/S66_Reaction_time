@@ -1,17 +1,17 @@
-const time = require("../model/timeModel")
+const Time = require("../models/timeModel")
 
 const getTime = async(req,res)=>{
     try{
-        const allTimes = await time.find()
+        const allTimes = await Time.find()
         res.status(200).send(allTimes)
     }catch(err){
-        res.status(500).send({message: "Error retrieving time", error: err.message})
+        res.status(500).send({message: "Error retrieving Time", error: err.message})
     }
 }
 
 const postTime = async (req, res) => {
     try {
-      const newTime = new time(req.body);
+      const newTime = new Time(req.body);
       await newTime.save();
       res.status(201).json(newTime);
     } catch (err) {

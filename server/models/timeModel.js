@@ -7,7 +7,7 @@ const timeSchema = new mongoose.Schema({
        required: true
    },
 
-   player: {
+   name: {
        type: String,
        default: "Anonymous"
    }

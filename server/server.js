@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 // const UserModel = require('./model/userModel');
 const userRoutes = require('./routes/userRoutes');
 const timeRoutes = require('./routes/timeRoutes')
+const cors = require('cors');
 
 require('dotenv').config();
 
+app.use(cors())
 app.use(express.json());
 
 let dbConnectionStatus = 'Disconnected'
