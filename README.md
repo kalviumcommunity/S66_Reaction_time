@@ -1,10 +1,12 @@
 
-Project title : Reaction time (React)
 
-Project overview:
+# Project title : Reaction time (React)
+
+## Project overview:
+
 Reaction time is a simple app to check what is the reaction time of the user .The app will display a prompt, and users must click as quickly as possible after it appears. It allows users to check their reaction time and creating a scoreboard where the user can view their past records.
 
-Key features:
+## Key features:
 
 Start : users can start the test
 Delay : there is a random delay before the prompt appears
@@ -20,5 +22,6 @@ Why this project:
 This project is used to enhance skills in event handling,managing state and working with timers in react,The project will help in developing a deeper understanding of React's asynchronous behavior and user interaction management, which are essential for building interactive web applications.
 
 
-###  DEPLOYED LINK
+##  DEPLOYED LINK:
+
 - cloud flare - https://reaction-time-tester-bzi.pages.dev/ .

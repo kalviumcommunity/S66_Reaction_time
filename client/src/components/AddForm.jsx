@@ -1,36 +1,40 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./AddForm.css"
-
+import "./AddForm.css";
 
 const AddTime = () => {
   const [time, setTime] = useState("");
   const [player, setPlayer] = useState("");
   const navigate = useNavigate();
 
-  const onTimeAdded = ()=>{
-    alert("New Time added")
+  // Function to convert sec:ms to total milliseconds
+  const parseTime = (timeStr) => {
+    const [sec, ms] = timeStr.split(":").map(Number); 
+    return (sec * 1000) + ms; 
+  };
+
+  const onTimeAdded = () => {
+    alert("New Time added");
     setTime("");
     setPlayer("");
-    navigate("/excuses")
-    
-  }
+    navigate("/leaderboard");
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8080/add-excuse", {
+      const totalMilliseconds = parseTime(time); 
+      const response = await fetch("http://localhost:8001/time/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ time, player }),
+        body: JSON.stringify({ time: totalMilliseconds, player }),
       });
 
       if (!response.ok) throw new Error("Failed to add time");
 
       const newTime = await response.json();
-      console.log(newTime)
+      console.log(newTime);
       onTimeAdded();
-
     } catch (error) {
       console.error("Error adding excuse:", error);
     }
@@ -41,7 +45,7 @@ const AddTime = () => {
       <h2 className="text-xl font-semibold">Add New Time</h2>
       <input
         type="text"
-        placeholder="Time (sec:millisecond)"
+        placeholder="Time (sec:ms)"
         value={time}
         onChange={(e) => setTime(e.target.value)}
         className="w-full p-2 border rounded"
