@@ -14,4 +14,4 @@ const timeSchema = new mongoose.Schema({
    
 })
 
-module.exports = mongoose.model("time",timeSchema)
+module.exports = mongoose.model("Time",timeSchema)
