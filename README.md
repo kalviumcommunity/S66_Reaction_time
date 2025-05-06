@@ -21,4 +21,4 @@ This project is used to enhance skills in event handling,managing state and work
 
 
 ###  DEPLOYED LINK
-- cloud flare - https://reaction-time-tester-bzi.pages.dev/
+- cloud flare - https://reaction-time-tester-bzi.pages.dev/ .
