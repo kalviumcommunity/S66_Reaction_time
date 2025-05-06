@@ -11,7 +11,7 @@ const LeaderboardList = ({ times }) => {
             <span className="rank">#{index + 1}</span>
             <h3 className="reaction-time">{time.time} ms</h3>
             <p className="player-name">- {time.name || "Anonymous"}</p>
-          </div>
+          </div>  
         ))
       ) : (
         <p className="no-times">No reaction times recorded yet.</p>
